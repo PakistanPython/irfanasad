@@ -21,7 +21,7 @@ body {
 /* Header Styles */
 .header {
     background-color: #1a1a1a;
-    padding: 1rem 0;
+    padding: 0.1rem 0; /* Reduced padding */
     position: fixed;
     top: 0;
     width: 100%;
@@ -35,7 +35,7 @@ body {
     display: flex;
     justify-content: space-around; /* Distribute space more evenly */
     align-items: center;
-    padding: 1rem 2rem; /* Add padding to the container itself */
+    padding: 0.09rem 1rem; /* Reduced horizontal padding */
     flex-wrap: nowrap; /* Prevent items from wrapping */
 }
 
