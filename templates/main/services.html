@@ -1,0 +1,256 @@
+{% extends 'base.html' %}
+
+{% block title %}Our Services - Luxury Transportation Services - Alpine Limousine NYC{% endblock %}
+
+{% block description %}Premium limousine and chauffeur services in NYC including airport transfers, corporate transportation, wedding services, and group events. Available 24/7.{% endblock %}
+
+{% block content %}
+<!-- Page Header -->
+<section class="hero" style="height: 60vh; background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('/static/images/corp-tavel.jpg'); background-size: cover; background-position: center;">
+    <div class="hero-content">
+        <h1>Our Premium Services</h1>
+        <p class="hero-subtitle">Comprehensive luxury transportation solutions</p>
+        <p>From executive business travel to special celebrations, we offer tailored transportation services designed to meet your unique needs with uncompromising quality and professionalism.</p>
+        <div class="hero-buttons">
+            <a href="javascript:openExternalBooking()" class="btn btn-primary">Book Service</a>
+            <a href="{% url 'main:contact' %}" class="btn btn-secondary">Get Quote</a>
+        </div>
+    </div>
+</section>
+
+<!-- Services Overview -->
+<section class="section" style="background-color: #1a1a1a;">
+    <div class="container">
+        <h2 class="section-title">Luxury Transportation for Every Occasion</h2>
+        <div style="text-align: center; max-width: 800px; margin: 0 auto;">
+            <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 3rem; color: #cccccc;">
+                Alpine Limousine provides comprehensive luxury transportation services throughout New York City and beyond. Our professional chauffeurs and premium fleet ensure that every journey is comfortable, safe, and memorable.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- Detailed Services -->
+<section class="section services">
+    <div class="container">
+        
+        <!-- Airport Services -->
+        <div id="airport-concierge" style="margin-bottom: 4rem;">
+            <h3 style="color: #DAA520; font-size: 2rem; margin-bottom: 2rem; text-align: center;">Airport Transportation</h3>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <img src="/static/images/city.jpg" alt="Airport Concierge Service">
+                    <div class="service-content">
+                        <h4>Airport Concierge Services</h4>
+                        <p>Experience stress-free airport transportation with our comprehensive concierge services. We monitor flight schedules, assist with luggage, and provide meet-and-greet services to ensure a seamless transition from air to ground travel.</p>
+                        <ul style="margin: 1rem 0; color: #cccccc;">
+                            <li>Flight monitoring and tracking</li>
+                            <li>Meet-and-greet services</li>
+                            <li>Luggage assistance</li>
+                            <li>Terminal navigation support</li>
+                        </ul>
+                        <a href="javascript:openExternalBooking()" class="btn btn-primary">Book Airport Service</a>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <img src="/static/images/Mercedes-Benz-S-Class-768x473.png" alt="Airport Limousine Services">
+                    <div class="service-content">
+                        <h4>Airport Limousine Services</h4>
+                        <p>Arrive and depart in style with our premium airport limousine services. Perfect for business travelers, special occasions, or when you simply want to travel in luxury and comfort.</p>
+                        <ul style="margin: 1rem 0; color: #cccccc;">
+                            <li>All major NYC airports (JFK, LGA, EWR)</li>
+                            <li>Real-time flight tracking</li>
+                            <li>Complimentary wait time</li>
+                            <li>Premium vehicle selection</li>
+                        </ul>
+                        <a href="javascript:openExternalBooking()" class="btn btn-primary">Book Limousine Service</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Corporate Services -->
+        <div id="corporate-events" style="margin-bottom: 4rem;">
+            <h3 style="color: #DAA520; font-size: 2rem; margin-bottom: 2rem; text-align: center;">Corporate Transportation</h3>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <img src="/static/images/corp-tavel.jpg" alt="Corporate Event Transportation">
+                    <div class="service-content">
+                        <h4>Corporate Event Transportation</h4>
+                        <p>Make your corporate events memorable with our professional transportation services. From client pickups to team outings, we ensure your guests travel in comfort and style.</p>
+                        <ul style="margin: 1rem 0; color: #cccccc;">
+                            <li>Multi-vehicle coordination</li>
+                            <li>Event planning support</li>
+                            <li>Professional uniformed chauffeurs</li>
+                            <li>Corporate billing options</li>
+                        </ul>
+                        <a href="javascript:openExternalBooking()" class="btn btn-primary">Plan Corporate Event</a>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <img src="/static/images/corp2.jpg" alt="Executive Black Car Service">
+                    <div class="service-content">
+                        <h4>Executive Black Car Service</h4>
+                        <p>Our executive black car service provides the perfect solution for business professionals who demand reliability, punctuality, and sophistication in their daily transportation needs.</p>
+                        <ul style="margin: 1rem 0; color: #cccccc;">
+                            <li>Daily and hourly rentals</li>
+                            <li>Executive-level vehicles</li>
+                            <li>Discretion and professionalism</li>
+                            <li>Corporate accounts available</li>
+                        </ul>
+                        <a href="javascript:openExternalBooking()" class="btn btn-primary">Book Executive Service</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Personal Services -->
+        <div id="private-chauffeur" style="margin-bottom: 4rem;">
+            <h3 style="color: #DAA520; font-size: 2rem; margin-bottom: 2rem; text-align: center;">Personal Transportation</h3>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <img src="/static/images/1.jpg" alt="Hourly Chauffeur Services">
+                    <div class="service-content">
+                        <h4>Hourly & Private Daily Chauffeur Services</h4>
+                        <p>Whether you need a chauffeur for an hour or a full day, our flexible services accommodate your schedule. Perfect for shopping trips, sightseeing, or multi-stop itineraries.</p>
+                        <ul style="margin: 1rem 0; color: #cccccc;">
+                            <li>Flexible hourly bookings</li>
+                            <li>Full-day chauffeur service</li>
+                            <li>Multi-stop itineraries</li>
+                            <li>Wait time included</li>
+                        </ul>
+                        <a href="javascript:openExternalBooking()" class="btn btn-primary">Book Hourly Service</a>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <img src="/static/images/2.jpg" alt="Private Transportation">
+                    <div class="service-content">
+                        <h4>Private Transportation</h4>
+                        <p>Enjoy exclusive and private transportation services tailored to your individual needs and preferences. Our private service ensures complete privacy and personalized attention.</p>
+                        <ul style="margin: 1rem 0; color: #cccccc;">
+                            <li>Completely private service</li>
+                            <li>Customized itineraries</li>
+                            <li>Personal chauffeur assignment</li>
+                            <li>VIP treatment</li>
+                        </ul>
+                        <a href="javascript:openExternalBooking()" class="btn btn-primary">Book Private Service</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Special Events -->
+        <div style="margin-bottom: 4rem;">
+            <h3 style="color: #DAA520; font-size: 2rem; margin-bottom: 2rem; text-align: center;">Special Event Transportation</h3>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <img src="/static/images/4.jpg" alt="Wedding Transportation">
+                    <div class="service-content">
+                        <h4>Wedding & Bachelor Transportation</h4>
+                        <p>Make your special day even more memorable with our elegant wedding and bachelor party transportation. From the bride's arrival to the send-off, we handle every detail with care.</p>
+                        <ul style="margin: 1rem 0; color: #cccccc;">
+                            <li>Bridal party transportation</li>
+                            <li>Wedding day coordination</li>
+                            <li>Decorated vehicles available</li>
+                            <li>Photography-friendly service</li>
+                        </ul>
+                        <a href="javascript:openExternalBooking()" class="btn btn-primary">Book Wedding Service</a>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <img src="/static/images/group.jpg" alt="Group Events">
+                    <div class="service-content">
+                        <h4>Group Events</h4>
+                        <p>Planning a special group event? Let us handle the transportation logistics to make your event a success. From small groups to large parties, we have the right vehicles and expertise.</p>
+                        <ul style="margin: 1rem 0; color: #cccccc;">
+                            <li>Large group coordination</li>
+                            <li>Multiple vehicle dispatch</li>
+                            <li>Event timeline management</li>
+                            <li>Group pricing available</li>
+                        </ul>
+                        <a href="javascript:openExternalBooking()" class="btn btn-primary">Plan Group Event</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- International Service -->
+        <div id="worldwide-service" style="margin-bottom: 4rem;">
+            <h3 style="color: #DAA520; font-size: 2rem; margin-bottom: 2rem; text-align: center;">Worldwide Service</h3>
+            
+            <div class="service-card" style="max-width: 600px; margin: 0 auto;">
+                <img src="/static/images/world.jpg" alt="Worldwide Chauffeur Service">
+                <div class="service-content">
+                    <h4>Worldwide Chauffeur Service & Airport Transfers</h4>
+                    <p>Traveling internationally? Our worldwide chauffeur service ensures you receive the same level of excellence wherever you go. We coordinate with trusted partners globally to provide seamless transportation.</p>
+                    <ul style="margin: 1rem 0; color: #cccccc;">
+                        <li>Global partner network</li>
+                        <li>International airport transfers</li>
+                        <li>Same quality standards worldwide</li>
+                        <li>24/7 support and coordination</li>
+                    </ul>
+                    <a href="javascript:openExternalBooking()" class="btn btn-primary">Book International Service</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Service Features -->
+<section class="section" style="background-color: #1a1a1a;">
+    <div class="container">
+        <h2 class="section-title">Why Choose Our Services</h2>
+        
+        <div class="features-grid">
+            <div class="feature-card">
+                <i class="fas fa-clock" style="font-size: 2rem; color: #DAA520; margin-bottom: 1rem;"></i>
+                <h3>24/7 Availability</h3>
+                <p>Our services are available around the clock, 365 days a year. No matter when you need transportation, we're here to serve you.</p>
+            </div>
+            
+            <div class="feature-card">
+                <i class="fas fa-user-tie" style="font-size: 2rem; color: #DAA520; margin-bottom: 1rem;"></i>
+                <h3>Professional Chauffeurs</h3>
+                <p>All our chauffeurs are professionally trained, background-checked, and committed to providing exceptional service.</p>
+            </div>
+            
+            <div class="feature-card">
+                <i class="fas fa-shield-alt" style="font-size: 2rem; color: #DAA520; margin-bottom: 1rem;"></i>
+                <h3>Safety & Reliability</h3>
+                <p>Your safety is our top priority. Our vehicles are regularly maintained and our chauffeurs follow strict safety protocols.</p>
+            </div>
+            
+            <div class="feature-card">
+                <i class="fas fa-dollar-sign" style="font-size: 2rem; color: #DAA520; margin-bottom: 1rem;"></i>
+                <h3>Competitive Pricing</h3>
+                <p>We offer competitive, transparent pricing with no hidden fees. Quality luxury transportation at fair prices.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Call to Action -->
+<section class="section" style="background-color: #000000;">
+    <div class="container">
+        <h2 class="section-title">Ready to Book Your Service?</h2>
+        <div style="text-align: center; max-width: 800px; margin: 0 auto;">
+            <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 3rem; color: #cccccc;">
+                Experience the Alpine Limousine difference today. Our professional team is ready to provide you with exceptional transportation services tailored to your specific needs.
+            </p>
+            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                <a href="javascript:openExternalBooking()" class="btn btn-primary">Book Now</a>
+                <a href="{% url 'main:contact' %}" class="btn btn-secondary">Get Custom Quote</a>
+                <a href="tel:+1-555-0123" class="btn btn-secondary">Call Now</a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block title %}Cancellation Policy - Alpine Limousine NYC{% endblock %}
+
+{% block content %}
+<section class="hero" style="height: 40vh;">
+    <div class="hero-content">
+        <h1>Cancellation Policy</h1>
+        <p class="hero-subtitle">Understand our cancellation terms</p>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <div style="max-width: 800px; margin: 0 auto; color: #cccccc;">
+            <h2 style="color: #DAA520;">Cancellation Terms</h2>
+            
+            <div class="feature-card">
+                <h3>24+ Hours Notice</h3>
+                <p>Cancellations made 24 hours or more in advance: No charge</p>
+            </div>
+            
+            <div class="feature-card">
+                <h3>12-24 Hours Notice</h3>
+                <p>Cancellations made 12-24 hours in advance: 50% of total fare</p>
+            </div>
+            
+            <div class="feature-card">
+                <h3>Less than 12 Hours</h3>
+                <p>Cancellations made less than 12 hours in advance: Full fare charge</p>
+            </div>
+            
+            <div class="feature-card">
+                <h3>No-Show Policy</h3>
+                <p>No-shows will be charged the full fare amount</p>
+            </div>
+            
+            <h3 style="color: #DAA520; margin-top: 2rem;">Special Circumstances</h3>
+            <p>Weather-related cancellations and emergencies may be handled on a case-by-case basis. Please contact us immediately if special circumstances arise.</p>
+        </div>
+    </div>
+</section>
+{% endblock %}

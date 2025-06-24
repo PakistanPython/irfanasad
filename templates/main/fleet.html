@@ -1,0 +1,170 @@
+{% extends 'base.html' %}
+
+{% block title %}Our Fleet - Luxury Vehicles - Alpine Limousine NYC{% endblock %}
+
+{% block description %}Explore our premium fleet of luxury vehicles including sedans, SUVs, limousines, and buses. Professional chauffeur service available 24/7 in NYC.{% endblock %}
+
+{% block content %}
+<!-- Page Header -->
+<section class="hero" style="height: 60vh; background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('/static/images/Cadillac-Escalade-768x473.png'); background-size: cover; background-position: center;">
+    <div class="hero-content">
+        <h1>Our Premium Fleet</h1>
+        <p class="hero-subtitle">Choose from our extensive collection of luxury vehicles</p>
+        <p>From elegant sedans to spacious coaches, our meticulously maintained fleet offers the perfect vehicle for every occasion and group size.</p>
+        <div class="hero-buttons">
+            <a href="javascript:openExternalBooking()" class="btn btn-primary">Book Now</a>
+            <a href="{% url 'main:contact' %}" class="btn btn-secondary">Get Quote</a>
+        </div>
+    </div>
+</section>
+
+<!-- Fleet Introduction -->
+<section class="section" style="background-color: #1a1a1a;">
+    <div class="container">
+        <h2 class="section-title">Luxury Vehicles for Every Occasion</h2>
+        <div style="text-align: center; max-width: 800px; margin: 0 auto;">
+            <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 3rem; color: #cccccc;">
+                Our diverse fleet of luxury vehicles ensures that we can accommodate any transportation need, from intimate executive travel to large group events. Each vehicle is meticulously maintained, professionally detailed, and equipped with premium amenities to ensure your comfort and safety.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- Fleet Categories -->
+<section class="section fleet">
+    <div class="container">
+        <!-- Luxury Sedans -->
+        <div style="margin-bottom: 4rem;">
+            <h3 style="color: #DAA520; font-size: 2rem; margin-bottom: 2rem; text-align: center;">Luxury Sedans</h3>
+            <div class="fleet-grid">
+                {% for vehicle in vehicles %}
+                    {% if 'Lincoln Continental' in vehicle.name or 'Mercedes Benz S Class' in vehicle.name or 'Cadillac XTS' in vehicle.name or 'Chrysler 300' in vehicle.name %}
+                    <div class="vehicle-card">
+                        <img src="/static/{{ vehicle.image }}" alt="{{ vehicle.name }}">
+                        <div class="vehicle-info">
+                            <h4>{{ vehicle.name }}</h4>
+                            <p>{{ vehicle.description }}</p>
+                            <div style="margin-top: 1rem;">
+                                <a href="javascript:openExternalBooking()" class="btn btn-primary" style="font-size: 0.9rem; padding: 0.5rem 1rem;">Book Now</a>
+                            </div>
+                        </div>
+                    </div>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+
+        <!-- Luxury SUVs -->
+        <div style="margin-bottom: 4rem;">
+            <h3 style="color: #DAA520; font-size: 2rem; margin-bottom: 2rem; text-align: center;">Luxury SUVs</h3>
+            <div class="fleet-grid">
+                {% for vehicle in vehicles %}
+                    {% if 'Cadillac Escalade' in vehicle.name or 'Chevrolet Suburban' in vehicle.name or 'Ford Expedition' in vehicle.name or 'GMC Yukon XL' in vehicle.name or 'Infiniti QX60' in vehicle.name or 'Lincoln Navigator' in vehicle.name or 'Lincoln MKT' in vehicle.name %}
+                    <div class="vehicle-card">
+                        <img src="/static/{{ vehicle.image }}" alt="{{ vehicle.name }}">
+                        <div class="vehicle-info">
+                            <h4>{{ vehicle.name }}</h4>
+                            <p>{{ vehicle.description }}</p>
+                            <div style="margin-top: 1rem;">
+                                <a href="javascript:openExternalBooking()" class="btn btn-primary" style="font-size: 0.9rem; padding: 0.5rem 1rem;">Book Now</a>
+                            </div>
+                        </div>
+                    </div>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+
+        <!-- Stretch Limousines -->
+        <div style="margin-bottom: 4rem;">
+            <h3 style="color: #DAA520; font-size: 2rem; margin-bottom: 2rem; text-align: center;">Stretch Limousines</h3>
+            <div class="fleet-grid">
+                {% for vehicle in vehicles %}
+                    {% if 'Stretch' in vehicle.name %}
+                    <div class="vehicle-card">
+                        <img src="/static/{{ vehicle.image }}" alt="{{ vehicle.name }}">
+                        <div class="vehicle-info">
+                            <h4>{{ vehicle.name }}</h4>
+                            <p>{{ vehicle.description }}</p>
+                            <div style="margin-top: 1rem;">
+                                <a href="javascript:openExternalBooking()" class="btn btn-primary" style="font-size: 0.9rem; padding: 0.5rem 1rem;">Book Now</a>
+                            </div>
+                        </div>
+                    </div>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+
+        <!-- Vans & Buses -->
+        <div style="margin-bottom: 4rem;">
+            <h3 style="color: #DAA520; font-size: 2rem; margin-bottom: 2rem; text-align: center;">Group Transportation</h3>
+            <div class="fleet-grid">
+                {% for vehicle in vehicles %}
+                    {% if 'Van' in vehicle.name or 'Bus' in vehicle.name or 'Sprinter' in vehicle.name %}
+                    <div class="vehicle-card">
+                        <img src="/static/{{ vehicle.image }}" alt="{{ vehicle.name }}">
+                        <div class="vehicle-info">
+                            <h4>{{ vehicle.name }}</h4>
+                            <p>{{ vehicle.description }}</p>
+                            <div style="margin-top: 1rem;">
+                                <a href="javascript:openExternalBooking()" class="btn btn-primary" style="font-size: 0.9rem; padding: 0.5rem 1rem;">Book Now</a>
+                            </div>
+                        </div>
+                    </div>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Fleet Features -->
+<section class="section" style="background-color: #1a1a1a;">
+    <div class="container">
+        <h2 class="section-title">Premium Features & Amenities</h2>
+        
+        <div class="features-grid">
+            <div class="feature-card">
+                <i class="fas fa-shield-alt" style="font-size: 2rem; color: #DAA520; margin-bottom: 1rem;"></i>
+                <h3>Safety First</h3>
+                <p>All vehicles undergo regular safety inspections and maintenance. Our chauffeurs are professionally trained and background-checked for your security.</p>
+            </div>
+            
+            <div class="feature-card">
+                <i class="fas fa-wifi" style="font-size: 2rem; color: #DAA520; margin-bottom: 1rem;"></i>
+                <h3>Premium Amenities</h3>
+                <p>Complimentary WiFi, climate control, premium sound systems, and refreshments available in select vehicles.</p>
+            </div>
+            
+            <div class="feature-card">
+                <i class="fas fa-clock" style="font-size: 2rem; color: #DAA520; margin-bottom: 1rem;"></i>
+                <h3>24/7 Availability</h3>
+                <p>Our fleet is available around the clock, 365 days a year. Whether it's an early morning flight or late-night event, we're here for you.</p>
+            </div>
+            
+            <div class="feature-card">
+                <i class="fas fa-user-tie" style="font-size: 2rem; color: #DAA520; margin-bottom: 1rem;"></i>
+                <h3>Professional Chauffeurs</h3>
+                <p>Our experienced chauffeurs are courteous, punctual, and knowledgeable about NYC. They'll ensure you arrive at your destination safely and on time.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Call to Action -->
+<section class="section" style="background-color: #000000;">
+    <div class="container">
+        <h2 class="section-title">Ready to Experience Luxury Transportation?</h2>
+        <div style="text-align: center; max-width: 800px; margin: 0 auto;">
+            <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 3rem; color: #cccccc;">
+                Book your luxury ride today and experience the difference that comes with choosing Alpine Limousine. Whether you need airport transportation, corporate travel, or special event transportation, our premium fleet is ready to serve you.
+            </p>
+            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                <a href="javascript:openExternalBooking()" class="btn btn-primary">Book Your Ride</a>
+                <a href="{% url 'main:contact' %}" class="btn btn-secondary">Get Custom Quote</a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

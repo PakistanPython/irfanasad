@@ -1,0 +1,319 @@
+{% extends 'base.html' %}
+
+{% block title %}Luxury Limo and Chauffeur Services in NYC - Book a Ride - Alpine Limousine{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero">
+    <div class="hero-content">
+        <h1>The NYC Limo Service You Can Count On</h1>
+        <p class="hero-subtitle">The leading choice in the corporate world</p>
+        <p>Alpine Limousine is your premier destination for sophisticated transportation services in the heart of New York City. With a focus on providing unparalleled limo services, concierge assistance, and black car luxury, we are dedicated to ensuring a seamless and stylish travel experience for every client. Book your ride today.</p>
+        <div class="hero-buttons">
+            <a href="javascript:openExternalBooking()" class="btn btn-primary">book a ride</a>
+            <a href="{% url 'main:join_chauffeur' %}" class="btn btn-secondary">Apply as a driver</a>
+        </div>
+    </div>
+</section>
+
+<!-- Mobile App Promotion -->
+<section class="section mobile-app">
+    <div class="container">
+        <h2 class="section-title">Professional Limo Services in the Palm of Your Hand</h2>
+        <p class="section-subtitle">Download the Alpine Limousine app to easily book safe, private rides while you're on the go.</p>
+        <div class="app-badges">
+            <a href="#" target="_blank">
+                <img src="/static/images/badge_googlePlay.png" alt="Download on Google Play" class="app-badge">
+            </a>
+            <a href="#" target="_blank">
+                <img src="/static/images/badge_appStore.png" alt="Download on App Store" class="app-badge">
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Why Alpine Limousine Section -->
+<section class="section why-alpine">
+    <div class="container">
+        <h2 class="section-title">Why Alpine Limousine?</h2>
+        
+        <div class="features-grid">
+            <div class="feature-card">
+                <h3>Round-the-Clock Services</h3>
+                <p>Alpine Limousine takes pride in being your comprehensive, luxury corporate black car and limo service in NYC, whether you're traveling within the Big Apple or internationally. Our fleet is at your service 24 hours a day, seven days a week, 365 days a year.</p>
+            </div>
+            
+            <div class="feature-card">
+                <h3>Excellent Customer Experience</h3>
+                <p>Every customer is considered a VIP here at Alpine Limousine. We understand how nerve-wracking traveling throughout the city can be, especially if you're heading to an important meeting, event, or flight. Public transportation may not get you there on time or in style, but our limo services in New York City will. Experience a professional and comfortable transportation experience without any of the hassles.</p>
+            </div>
+            
+            <div class="feature-card">
+                <h3>Affordable Services</h3>
+                <p>We're not just known for our courtesy and expertise. Clients praise us for our competitive, budget-friendly prices. We're an experienced limo service in NYC, going above and beyond to offer our customers the services they desire for pricing within their budget.</p>
+            </div>
+            
+            <div class="feature-card">
+                <h3>Clean and Safe Fleet</h3>
+                <p>We prioritize the cleanliness and safety of our fleet to provide you with the utmost peace of mind during your journey. Our vehicles undergo rigorous cleaning protocols to ensure a pristine environment for every ride. Additionally, our chauffeurs are trained in following strict safety measures and guidelines to guarantee a secure and comfortable travel experience for all passengers.</p>
+            </div>
+        </div>
+        
+        <div style="text-align: center; margin-top: 3rem;">
+            <a href="javascript:openExternalBooking()" class="btn btn-primary">book a ride</a>
+        </div>
+    </div>
+</section>
+
+<!-- Services Section -->
+<section class="section services">
+    <div class="container">
+        <h2 class="section-title">Our Services</h2>
+        
+        <div class="services-grid">
+            <div class="service-card">
+                <img src="/static/images/1.jpg" alt="Hourly And Private Daily Chauffeur Services">
+                <div class="service-content">
+                    <h3>Hourly And Private Daily Chauffeur Services:</h3>
+                    <p>Whether you need a chauffeur for an hour or a full day, our services are flexible to accommodate your schedule.</p>
+                    <a href="{% url 'main:services' %}" class="btn btn-secondary">Learn More</a>
+                </div>
+            </div>
+            
+            <div class="service-card">
+                <img src="/static/images/corp-tavel.jpg" alt="Corporate & Executive Transportation">
+                <div class="service-content">
+                    <h3>Corporate & Executive Transportation:</h3>
+                    <p>Experience luxury and professionalism during your corporate travels with our executive transportation services.</p>
+                    <div style="margin-top: 1rem;">
+                        <a href="{% url 'main:services' %}" class="btn btn-secondary" style="margin-right: 10px;">Corporate Transportation</a>
+                        <a href="{% url 'main:services' %}" class="btn btn-secondary">Executive Transportation</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="service-card">
+                <img src="/static/images/2.jpg" alt="Private Transportation">
+                <div class="service-content">
+                    <h3>Private Transportation:</h3>
+                    <p>Enjoy exclusive and private transportation services tailored to your individual needs and preferences.</p>
+                    <a href="{% url 'main:services' %}" class="btn btn-secondary">Learn More</a>
+                </div>
+            </div>
+            
+            <div class="service-card">
+                <img src="/static/images/4.jpg" alt="Wedding & Bachelor Transportation">
+                <div class="service-content">
+                    <h3>Wedding & Bachelor Transportation:</h3>
+                    <p>Make your special day even more memorable with our elegant wedding and bachelor transportation options.</p>
+                    <a href="{% url 'main:services' %}" class="btn btn-secondary">Learn More</a>
+                </div>
+            </div>
+            
+            <div class="service-card">
+                <img src="/static/images/city.jpg" alt="Airport Concierge Services">
+                <div class="service-content">
+                    <h3>Airport Concierge Services:</h3>
+                    <p>Take the stress out of airport transportation with our reliable and efficient airport commute services.</p>
+                    <a href="{% url 'main:services' %}" class="btn btn-secondary">Learn More</a>
+                </div>
+            </div>
+            
+            <div class="service-card">
+                <img src="/static/images/group.jpg" alt="Group Events">
+                <div class="service-content">
+                    <h3>Group Events:</h3>
+                    <p>Planning a special group event? Let us handle the transportation logistics to make your event a success.</p>
+                    <a href="{% url 'main:services' %}" class="btn btn-secondary">Learn More</a>
+                </div>
+            </div>
+            
+            <div class="service-card">
+                <img src="/static/images/world.jpg" alt="Worldwide Chauffeur Service">
+                <div class="service-content">
+                    <h3>Worldwide Chauffeur Service:</h3>
+                    <p>Traveling internationally? Our worldwide chauffeur service ensures you receive the same level of excellence wherever you go.</p>
+                    <a href="{% url 'main:services' %}" class="btn btn-secondary">Learn More</a>
+                </div>
+            </div>
+            
+            <div class="service-card">
+                <img src="/static/images/corp2.jpg" alt="Corporate Black Car Service">
+                <div class="service-content">
+                    <h3>Corporate Black Car Service:</h3>
+                    <p>Impress your clients and colleagues with our corporate black car service, combining style and professionalism for all your business needs.</p>
+                    <a href="{% url 'main:services' %}" class="btn btn-secondary">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Fleet Preview Section -->
+<section class="section fleet">
+    <div class="container">
+        <h2 class="section-title">Our Fleet</h2>
+        
+        <div class="fleet-grid">
+            <div class="vehicle-card">
+                <img src="/static/images/24-Passenger-Van-768x473.png" alt="24-Passenger Van">
+                <div class="vehicle-info">
+                    <h3>24-Passenger Van</h3>
+                    <p>Perfect for group transportation</p>
+                </div>
+            </div>
+            
+            <div class="vehicle-card">
+                <img src="/static/images/40-Passenger-Coach-Bus-768x473.png" alt="40-Passenger Coach Bus">
+                <div class="vehicle-info">
+                    <h3>40-Passenger Coach Bus</h3>
+                    <p>Ideal for large group events</p>
+                </div>
+            </div>
+            
+            <div class="vehicle-card">
+                <img src="/static/images/56-Passenger-Bus-768x473.png" alt="56-Passenger Bus">
+                <div class="vehicle-info">
+                    <h3>56-Passenger Bus</h3>
+                    <p>Maximum capacity for corporate events</p>
+                </div>
+            </div>
+            
+            <div class="vehicle-card">
+                <img src="/static/images/Black-Velvet-Lincoln-Continental-768x473.png" alt="Lincoln Continental">
+                <div class="vehicle-info">
+                    <h3>Lincoln Continental</h3>
+                    <p>Luxury and elegance combined</p>
+                </div>
+            </div>
+            
+            <div class="vehicle-card">
+                <img src="/static/images/Mercedes-Benz-S-Class-768x473.png" alt="Mercedes Benz S Class">
+                <div class="vehicle-info">
+                    <h3>Mercedes Benz S Class</h3>
+                    <p>Premium luxury sedan</p>
+                </div>
+            </div>
+            
+            <div class="vehicle-card">
+                <img src="/static/images/Cadillac-Escalade-768x473.png" alt="Cadillac Escalade">
+                <div class="vehicle-info">
+                    <h3>Cadillac Escalade</h3>
+                    <p>Spacious luxury SUV</p>
+                </div>
+            </div>
+        </div>
+        
+        <div style="text-align: center; margin-top: 3rem;">
+            <a href="{% url 'main:fleet' %}" class="btn btn-secondary">View Complete Fleet</a>
+            <a href="javascript:openExternalBooking()" class="btn btn-primary" style="margin-left: 1rem;">book a ride</a>
+        </div>
+    </div>
+</section>
+
+<!-- First-Class Care Section -->
+<section class="section" style="background-color: #1a1a1a;">
+    <div class="container">
+        <h2 class="section-title">First-Class Care & Convenience</h2>
+        <div style="text-align: center; max-width: 800px; margin: 0 auto;">
+            <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 2rem; color: #cccccc;">
+                At Alpine Limousine, our mission is to provide luxurious, reliable, and professional limousine services in NYC and beyond, from airport transfers to group events. Our private chauffeurs always show up on time and are prepared to offer the best possible experience.
+            </p>
+            <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 2rem; color: #cccccc;">
+                You enjoy unrivaled customer support and courtesy when you choose Alpine as your go-to limo service. You'll quickly understand why our clients prefer our New York limo service and return year after year.
+            </p>
+            <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 3rem; color: #cccccc;">
+                We look forward to providing you with the most relaxing and luxurious black car service wherever you need to go!
+            </p>
+            <a href="javascript:openExternalBooking()" class="btn btn-primary">book a ride</a>
+        </div>
+    </div>
+</section>
+
+<!-- Mobile App Section -->
+<section class="section mobile-app">
+    <div class="container">
+        <div class="app-content">
+            <div class="app-text">
+                <h2 class="section-title" style="text-align: left;">Luxury Transportation at Your Fingertips</h2>
+                <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 2rem; color: #cccccc;">
+                    Streamline your travel experience with the Alpine Limousine mobile app. Our user-friendly app puts the power of luxury transportation at your fingertips, allowing you to easily book and manage your rides with just a few taps on your smartphone. Enjoy the convenience of tracking your chauffeur in real time, receiving live updates on your reservation, and accessing all our services directly from the app. Download the Alpine Limousine app today and elevate your transportation experience to a whole new level of convenience.
+                </p>
+                <a href="javascript:openExternalBooking()" class="btn btn-primary">book a ride</a>
+            </div>
+            <div class="app-image">
+                <img src="/static/images/img-2-app-1.png" alt="Alpine Limousine Mobile App">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Call to Action Section -->
+<section class="section" style="background-color: #1a1a1a;">
+    <div class="container">
+        <h2 class="section-title">Book Your Ride Today</h2>
+        <div style="text-align: center; max-width: 800px; margin: 0 auto;">
+            <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 3rem; color: #cccccc;">
+                Elevate your travel experience with Alpine Limousine, where luxury, comfort, and sophistication converge to create unforgettable journeys in New York City. Whether you need premium limo services, personalized concierge assistance, or black car elegance, we are here to exceed your expectations and redefine your travel experience. Book your ride with Alpine Limousine and experience the pinnacle of luxury transportation in the Big Apple.
+            </p>
+            <a href="javascript:openExternalBooking()" class="btn btn-primary">book a ride</a>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Form Section -->
+<section class="section contact">
+    <div class="container">
+        <h2 class="section-title">Contact Alpine Limousine</h2>
+        
+        <form class="contact-form" id="contact-form">
+            <div class="form-grid">
+                <div class="form-group">
+                    <label for="first_name">First Name</label>
+                    <input type="text" id="first_name" name="first_name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="last_name">Last Name</label>
+                    <input type="text" id="last_name" name="last_name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone">Phone</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="company">Company</label>
+                    <input type="text" id="company" name="company">
+                </div>
+                
+                <div class="form-group full-width">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" required placeholder="Tell us about your transportation needs..."></textarea>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 2rem;">
+                <button type="submit" class="btn btn-primary">SUBMIT</button>
+            </div>
+        </form>
+    </div>
+</section>
+
+<!-- Professional Certifications -->
+<section class="section" style="background-color: #1a1a1a; padding: 2rem 0;">
+    <div class="container">
+        <div style="display: flex; justify-content: center; align-items: center; gap: 3rem; flex-wrap: wrap;">
+            <img src="/static/images/logos-nla-300x200.png" alt="NLA Member" style="height: 60px; opacity: 0.8;">
+            <img src="/static/images/logos-lanj-300x200.png" alt="LANJ Member" style="height: 60px; opacity: 0.8;">
+            <img src="/static/images/logos-napw-300x200.png" alt="NAPW Member" style="height: 60px; opacity: 0.8;">
+        </div>
+    </div>
+</section>
+{% endblock %}

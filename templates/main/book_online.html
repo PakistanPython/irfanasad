@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block title %}Book Online - Alpine Limousine NYC{% endblock %}
+
+{% block content %}
+<section class="hero">
+    <div class="hero-content">
+        <h1>Book Your Luxury Ride Online</h1>
+        <p class="hero-subtitle">Secure, Fast, and Easy Booking</p>
+        <p>You are being redirected to our secure booking system...</p>
+    </div>
+</section>
+
+<script>
+// Redirect to external booking system
+setTimeout(function() {
+    window.location.href = 'https://apps.alpinelimousinenyc.com/DefaultV2/Booking';
+}, 3000);
+</script>
+{% endblock %}

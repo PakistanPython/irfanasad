@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Alpine Limousine NYC - Luxury Limo and Chauffeur Services{% endblock %}</title>
+    <meta name="description" content="{% block description %}Premium limousine and chauffeur services in NYC. Professional black car service, airport transfers, corporate transportation. Book your luxury ride today.{% endblock %}">
+    <meta name="keywords" content="NYC limo service, luxury transportation, chauffeur service, black car service, airport transfers, corporate transportation">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/static/images/Alpine-favicon-150x150.png">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="/static/css/style.css">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    {% block extra_head %}{% endblock %}
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="nav-container">
+            <div class="logo">
+                <a href="{% url 'main:home' %}">
+                    <img src="/static/images/alpine-limo-logo.png" alt="Alpine Limousine NYC">
+                </a>
+            </div>
+            
+            <nav class="nav-menu">
+                <li><a href="{% url 'main:home' %}">Home</a></li>
+                <li><a href="{% url 'main:about' %}">About</a></li>
+                <li><a href="{% url 'main:fleet' %}">Our Fleet</a></li>
+                <li class="dropdown">
+                    <a href="{% url 'main:services' %}">Services <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#airport-concierge">Airport Concierge Service</a></li>
+                        <li><a href="#airport-limo">Airport Limousine Services</a></li>
+                        <li><a href="#corporate-events">Corporate Event Transportation</a></li>
+                        <li><a href="#executive-service">Executive Black Car Service</a></li>
+                        <li><a href="#group-events">Group Events</a></li>
+                        <li><a href="#private-chauffeur">Private Car & Chauffeur Services</a></li>
+                        <li><a href="#worldwide-service">Worldwide Limo Service & Airport Transfers</a></li>
+                    </ul>
+                </li>
+                <li><a href="{% url 'main:contact' %}">Contact</a></li>
+            </nav>
+            
+            <div class="nav-buttons">
+                <a href="javascript:openExternalBooking()" class="btn btn-primary">Book Online</a>
+                <a href="javascript:openExternalLogin()" class="btn btn-secondary">Login</a>
+                <a href="{% url 'main:join_chauffeur' %}" class="btn btn-secondary">Join as Chauffeur</a>
+            </div>
+            
+            <button class="mobile-menu-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>COMPANY</h3>
+                    <ul>
+                        <li><a href="{% url 'main:about' %}">ABOUT</a></li>
+                        <li><a href="{% url 'main:fleet' %}">OUR FLEET</a></li>
+                        <li><a href="#">Join Our Team</a></li>
+                        <li><a href="{% url 'main:join_chauffeur' %}">Join As A chauffeur</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>SERVICES</h3>
+                    <ul>
+                        <li><a href="{% url 'main:services' %}">Our Services</a></li>
+                        <li><a href="#">Pricing</a></li>
+                        <li><a href="#">Mobile Apps</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Legal</h3>
+                    <ul>
+                        <li><a href="{% url 'main:cancellation_policy' %}">CANCELLATION POLICY</a></li>
+                        <li><a href="{% url 'main:terms' %}">terms & conditions</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Useful Links</h3>
+                    <ul>
+                        <li><a href="{% url 'main:contact' %}">Contact Us</a></li>
+                        <li><a href="javascript:openExternalBooking()">Book Now</a></li>
+                        <li><a href="#">QUICK RECEIPT</a></li>
+                        <li><a href="{% url 'main:testimonials' %}">testimonials</a></li>
+                        <li><a href="javascript:openExternalLogin()">Login</a></li>
+                        <li><a href="#">Sign up</a></li>
+                        <li><a href="{% url 'main:faq' %}">FAQ</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>MAJOR CITIES</h3>
+                    <ul>
+                        <li><a href="#">New York City</a></li>
+                        <li><a href="#">Los Angeles</a></li>
+                        <li><a href="#">Chicago</a></li>
+                        <li><a href="#">Houston</a></li>
+                        <li><a href="#">Phoenix</a></li>
+                        <li><a href="#">Philadelphia</a></li>
+                        <li><a href="#">San Antonio</a></li>
+                        <li><a href="#">San Diego</a></li>
+                        <li><a href="#">Dallas</a></li>
+                        <li><a href="#">San Jose</a></li>
+                        <li><a href="#"><strong>** And Much More **</strong></a></li>
+                    </ul>
+                    
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/AlpineLimousine" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://twitter.com/AlpineLimoNYC" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="http://www.youtube.com/user/AlpineLimousine1" target="_blank"><i class="fab fa-youtube"></i></a>
+                        <a href="https://www.instagram.com/alpinelimoservice/" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-pinterest"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-yelp"></i></a>
+                    </div>
+                    
+                    <div class="language-selector">
+                        <span style="color: #DAA520; margin-right: 10px;">Select Language:</span>
+                        <img src="/static/images/ar.png" alt="Arabic" data-lang="ar" title="Arabic">
+                        <img src="/static/images/zh-CN.png" alt="Chinese" data-lang="zh" title="Chinese (Simplified)">
+                        <img src="/static/images/en-us.png" alt="English" data-lang="en" title="English">
+                        <img src="/static/images/fr.png" alt="French" data-lang="fr" title="French">
+                        <img src="/static/images/es-mx.png" alt="Spanish" data-lang="es" title="Spanish">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; All rights reserved to Alpine Limousine Service, Inc.</p>
+                <p>Made with ❤️ by <a href="https://attractiveo.com/" target="_blank" style="color: #DAA520;">Attractiveo</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="/static/js/main.js"></script>
+    {% block extra_js %}{% endblock %}
+</body>
+</html>

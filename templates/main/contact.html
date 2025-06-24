@@ -1,0 +1,209 @@
+{% extends 'base.html' %}
+
+{% block title %}Contact Us - Alpine Limousine NYC{% endblock %}
+
+{% block description %}Contact Alpine Limousine for luxury transportation services in NYC. Get quotes, book rides, or ask questions. Available 24/7 for your convenience.{% endblock %}
+
+{% block content %}
+<!-- Page Header -->
+<section class="hero" style="height: 60vh; background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('/static/images/city.jpg'); background-size: cover; background-position: center;">
+    <div class="hero-content">
+        <h1>Contact Alpine Limousine</h1>
+        <p class="hero-subtitle">We're here to serve you 24/7</p>
+        <p>Get in touch with our professional team for bookings, quotes, or any questions about our luxury transportation services.</p>
+        <div class="hero-buttons">
+            <a href="javascript:openExternalBooking()" class="btn btn-primary">Book Online</a>
+            <a href="tel:+1-555-0123" class="btn btn-secondary">Call Now</a>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Information -->
+<section class="section" style="background-color: #1a1a1a;">
+    <div class="container">
+        <h2 class="section-title">Get In Touch</h2>
+        
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 3rem; margin-bottom: 3rem;">
+            <div style="text-align: center; background-color: #2a2a2a; padding: 2rem; border-radius: 10px; border: 1px solid #444;">
+                <i class="fas fa-phone" style="font-size: 2rem; color: #DAA520; margin-bottom: 1rem;"></i>
+                <h3 style="color: #DAA520; margin-bottom: 1rem;">Call Us</h3>
+                <p style="color: #cccccc; font-size: 1.1rem;">24/7 Customer Service</p>
+                <a href="tel:+1-555-0123" style="color: #DAA520; font-size: 1.3rem; font-weight: bold; text-decoration: none;">+1 (555) 012-3456</a>
+            </div>
+            
+            <div style="text-align: center; background-color: #2a2a2a; padding: 2rem; border-radius: 10px; border: 1px solid #444;">
+                <i class="fas fa-envelope" style="font-size: 2rem; color: #DAA520; margin-bottom: 1rem;"></i>
+                <h3 style="color: #DAA520; margin-bottom: 1rem;">Email Us</h3>
+                <p style="color: #cccccc; font-size: 1.1rem;">General Inquiries</p>
+                <a href="mailto:info@alpinelimousinenyc.com" style="color: #DAA520; font-size: 1.1rem; text-decoration: none;">info@alpinelimousinenyc.com</a>
+            </div>
+            
+            <div style="text-align: center; background-color: #2a2a2a; padding: 2rem; border-radius: 10px; border: 1px solid #444;">
+                <i class="fas fa-map-marker-alt" style="font-size: 2rem; color: #DAA520; margin-bottom: 1rem;"></i>
+                <h3 style="color: #DAA520; margin-bottom: 1rem;">Visit Us</h3>
+                <p style="color: #cccccc; font-size: 1.1rem;">Service Area</p>
+                <p style="color: #DAA520; font-size: 1.1rem;">New York City & Surrounding Areas</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Form -->
+<section class="section contact">
+    <div class="container">
+        <h2 class="section-title">Send Us a Message</h2>
+        <div style="max-width: 800px; margin: 0 auto;">
+            <form class="contact-form" id="contact-form">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="first_name">First Name *</label>
+                        <input type="text" id="first_name" name="first_name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="last_name">Last Name *</label>
+                        <input type="text" id="last_name" name="last_name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">Phone Number *</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="company">Company</label>
+                        <input type="text" id="company" name="company" placeholder="Optional">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="service_type">Service Type</label>
+                        <select id="service_type" name="service_type" style="padding: 0.8rem; border: 1px solid #444; border-radius: 5px; background-color: #2a2a2a; color: #ffffff; font-size: 1rem;">
+                            <option value="">Select a service...</option>
+                            <option value="airport">Airport Transportation</option>
+                            <option value="corporate">Corporate Transportation</option>
+                            <option value="wedding">Wedding Transportation</option>
+                            <option value="group">Group Events</option>
+                            <option value="hourly">Hourly Service</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group full-width">
+                        <label for="message">Message *</label>
+                        <textarea id="message" name="message" required placeholder="Please provide details about your transportation needs, including dates, times, pickup/drop-off locations, and number of passengers..."></textarea>
+                    </div>
+                </div>
+                
+                <div style="text-align: center; margin-top: 2rem;">
+                    <button type="submit" class="btn btn-primary" style="min-width: 200px;">Send Message</button>
+                </div>
+                
+                <div style="text-align: center; margin-top: 1rem;">
+                    <p style="color: #888; font-size: 0.9rem;">* Required fields</p>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+
+<!-- Quick Actions -->
+<section class="section" style="background-color: #1a1a1a;">
+    <div class="container">
+        <h2 class="section-title">Quick Actions</h2>
+        
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem;">
+            <div class="feature-card" style="text-align: center;">
+                <i class="fas fa-calendar-alt" style="font-size: 2rem; color: #DAA520; margin-bottom: 1rem;"></i>
+                <h3>Book Online</h3>
+                <p>Use our secure online booking system to reserve your ride instantly.</p>
+                <a href="javascript:openExternalBooking()" class="btn btn-primary">Book Now</a>
+            </div>
+            
+            <div class="feature-card" style="text-align: center;">
+                <i class="fas fa-calculator" style="font-size: 2rem; color: #DAA520; margin-bottom: 1rem;"></i>
+                <h3>Get a Quote</h3>
+                <p>Request a custom quote for your specific transportation needs.</p>
+                <a href="javascript:openExternalBooking()" class="btn btn-secondary">Get Quote</a>
+            </div>
+            
+            <div class="feature-card" style="text-align: center;">
+                <i class="fas fa-mobile-alt" style="font-size: 2rem; color: #DAA520; margin-bottom: 1rem;"></i>
+                <h3>Download App</h3>
+                <p>Get our mobile app for easy booking and trip management on the go.</p>
+                <div style="margin-top: 1rem;">
+                    <img src="/static/images/badge_googlePlay.png" alt="Google Play" style="height: 40px; margin-right: 10px;">
+                    <img src="/static/images/badge_appStore.png" alt="App Store" style="height: 40px;">
+                </div>
+            </div>
+            
+            <div class="feature-card" style="text-align: center;">
+                <i class="fas fa-user-plus" style="font-size: 2rem; color: #DAA520; margin-bottom: 1rem;"></i>
+                <h3>Join Our Team</h3>
+                <p>Interested in becoming a chauffeur? Learn about our opportunities.</p>
+                <a href="{% url 'main:join_chauffeur' %}" class="btn btn-secondary">Apply Now</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Business Hours -->
+<section class="section" style="background-color: #000000;">
+    <div class="container">
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 3rem;">
+            <div>
+                <h3 style="color: #DAA520; font-size: 1.5rem; margin-bottom: 1rem;">Business Hours</h3>
+                <div style="color: #cccccc;">
+                    <p><strong>Service Availability:</strong></p>
+                    <p>24 hours a day, 7 days a week, 365 days a year</p>
+                    <br>
+                    <p><strong>Customer Service:</strong></p>
+                    <p>Monday - Friday: 8:00 AM - 10:00 PM</p>
+                    <p>Saturday - Sunday: 9:00 AM - 9:00 PM</p>
+                    <br>
+                    <p><strong>Emergency Services:</strong></p>
+                    <p>Available 24/7</p>
+                </div>
+            </div>
+            
+            <div>
+                <h3 style="color: #DAA520; font-size: 1.5rem; margin-bottom: 1rem;">Service Areas</h3>
+                <div style="color: #cccccc;">
+                    <p><strong>Primary Service Area:</strong></p>
+                    <p>New York City (All 5 Boroughs)</p>
+                    <br>
+                    <p><strong>Extended Areas:</strong></p>
+                    <p>Westchester County, Long Island, New Jersey</p>
+                    <br>
+                    <p><strong>Airports:</strong></p>
+                    <p>JFK, LaGuardia (LGA), Newark (EWR)</p>
+                    <br>
+                    <p><strong>Worldwide Service:</strong></p>
+                    <p>Available through our partner network</p>
+                </div>
+            </div>
+            
+            <div>
+                <h3 style="color: #DAA520; font-size: 1.5rem; margin-bottom: 1rem;">Follow Us</h3>
+                <div style="margin-bottom: 2rem;">
+                    <div class="social-links" style="justify-content: flex-start;">
+                        <a href="https://www.facebook.com/AlpineLimousine" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://twitter.com/AlpineLimoNYC" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="http://www.youtube.com/user/AlpineLimousine1" target="_blank"><i class="fab fa-youtube"></i></a>
+                        <a href="https://www.instagram.com/alpinelimoservice/" target="_blank"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <h3 style="color: #DAA520; font-size: 1.5rem; margin-bottom: 1rem;">Payment Methods</h3>
+                <div style="color: #cccccc;">
+                    <p>We accept all major credit cards, corporate accounts, and cash payments. Secure online payment processing available.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
